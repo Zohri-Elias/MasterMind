@@ -49,12 +49,12 @@ public class Main {
                 if (!allCorrect) {
                     System.out.println("\nVous n'avez pas trouvé toutes les positions. Essayez à nouveau !");
                 }
-                if (tentatives >= 3) {
+                if (tentatives >= 12) {
                     System.out.println("\nGame Over! Vous avez utilisé toutes vos tentatives.");
                     break;
                 }
             } while (!allCorrect);
-            if (tentatives > 3) {
+            if (tentatives > 12) {
                 System.out.println("\nFélicitations ! Vous avez trouvé la séquence complète !");
             }
 
