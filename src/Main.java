@@ -8,6 +8,7 @@ public class Main {
         do {
             int[] secretSequence = new int[5];
             boolean allCorrect;
+            int tentatives = 0;
 
             for (int i = 0; i < secretSequence.length; i++) {
                 secretSequence[i] = 1 + (int) (Math.random() * 9);
@@ -24,7 +25,8 @@ public class Main {
                 int[] propositionSequence = new int[5];
                 System.out.println("\nFaites votre proposition (entrez 5 chiffres séparément) :");
 
-
+                tentatives++;
+                
                 for (int i = 0; i < propositionSequence.length; i++) {
                     System.out.print("Proposition pour la position " + (i + 1) + " : ");
                     propositionSequence[i] = scanner.nextInt();
@@ -46,6 +48,10 @@ public class Main {
                 }
                 if (!allCorrect) {
                     System.out.println("\nVous n'avez pas trouvé toutes les positions. Essayez à nouveau !");
+                }
+                if (tentatives >= 3) {
+                    System.out.println("\nGame Over! Vous avez utilisé toutes vos tentatives.");
+                    break;
                 }
             } while (!allCorrect);
             System.out.println("\nFélicitations ! Vous avez trouvé la séquence complète !");
