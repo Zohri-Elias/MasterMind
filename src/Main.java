@@ -8,7 +8,6 @@ public class Main {
         do {
             int[] secretSequence = new int[5];
             boolean allCorrect;
-            
 
             for (int i = 0; i < secretSequence.length; i++) {
                 secretSequence[i] = 1 + (int) (Math.random() * 9);
@@ -24,7 +23,6 @@ public class Main {
                 allCorrect = true;
                 int[] propositionSequence = new int[5];
                 System.out.println("\nFaites votre proposition (entrez 5 chiffres séparément) :");
-
 
 
                 for (int i = 0; i < propositionSequence.length; i++) {
