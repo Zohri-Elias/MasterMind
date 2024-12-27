@@ -26,7 +26,7 @@ public class Main {
                 System.out.println("\nFaites votre proposition (entrez 5 chiffres séparément) :");
 
                 tentatives++;
-                
+
                 for (int i = 0; i < propositionSequence.length; i++) {
                     System.out.print("Proposition pour la position " + (i + 1) + " : ");
                     propositionSequence[i] = scanner.nextInt();
@@ -49,7 +49,7 @@ public class Main {
                 if (!allCorrect) {
                     System.out.println("\nVous n'avez pas trouvé toutes les positions. Essayez à nouveau !");
                 }
-                if (tentatives >= 3) {
+                if (tentatives >= 12) {
                     System.out.println("\nGame Over! Vous avez utilisé toutes vos tentatives.");
                     break;
                 }
